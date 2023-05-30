@@ -1,9 +1,9 @@
 const Home = () => {
-  const handleClick = () => {
-    console.log("Hello, Van");
+  const handleClick = (e) => {
+    console.log("Hello, Van", e);
   };
-  const handleClickAgain = (name) => {
-    console.log("Hello", name);
+  const handleClickAgain = (name, e) => {
+    console.log("Hello", name, e.target);
   };
 
   return (
@@ -12,8 +12,8 @@ const Home = () => {
       <button onClick={handleClick("Oanh")}>Click me</button>
 
       <button
-        onClick={() => {
-          console.log("hi there");
+        onClick={(e) => {
+          handleClickAgain("Oanh", e);
         }}
       >
         Click me again
