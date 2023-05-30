@@ -3,7 +3,9 @@ const Home = () => {
   const [name, setName] = useState("mario");
   const [age, setAge] = useState(23);
   const handleClick = () => {
-    setName("Hoa Hong");
+    const name = ["Nhan", "Oanh", "Ngoc"];
+    const int = Math.floor(Math.random() * 3);
+    setName(name[int]);
     setAge(30);
   };
 
