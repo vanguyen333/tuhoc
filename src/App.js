@@ -7,6 +7,7 @@ import {
   Switch,
 } from "react-router-dom";
 import Create from "./Create";
+import BlogDetails from "./BlogDetails";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/create" element={<Create />}></Route>
+          </Routes>
+          <Routes>
+            <Route path="/blogs/:id" element={<BlogDetails />}></Route>
           </Routes>
         </div>
       </div>
