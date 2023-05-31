@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     console.log("use effect ran");
     console.log(blogs);
-  });
+  }, []); //th empty array stops the functions it renders over and again
 
   return (
     <div className="home">
