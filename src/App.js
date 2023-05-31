@@ -6,6 +6,7 @@ import {
   Routes,
   Switch,
 } from "react-router-dom";
+import Create from "./Create";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />}></Route>
+          </Routes>
+          <Routes>
+            <Route path="/create" element={<Create />}></Route>
           </Routes>
         </div>
       </div>
