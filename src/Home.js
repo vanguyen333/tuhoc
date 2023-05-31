@@ -4,6 +4,7 @@ import Bloglist from "./Bloglist";
 const Home = () => {
   const [blogs, setBlogs] = useState(null);
   const [isPending, setIsPending] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,13 +20,14 @@ const Home = () => {
           setIsPending(false);
         })
         .catch((err) => {
-          console.log(err.message);
+          setError(err.message);
         });
     }, 1000);
   }, []); //the empty array stops the functions it renders over and again
 
   return (
     <div className="home">
+      {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {blogs && <Bloglist blogs={blogs} title="All Blogs" />}
     </div>
