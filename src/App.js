@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Create from "./Create";
 import BlogDetails from "./BlogDetails";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/blogs/:id" element={<BlogDetails />}></Route>
+          </Routes>
+          <Routes>
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
       </div>
